@@ -44,7 +44,7 @@ for affect in affect_list:
     for idd in train_data[affect]:
         #print idd
         try:
-           X_train.append([train_data[affect][idd]["ainl"][11]])
+           X_train.append(train_data[affect][idd]["ainl"])
            y_train.append(train_data[affect][idd]["magnitude"])
         except:
           exc_cnt_tr += 1
@@ -53,7 +53,7 @@ for affect in affect_list:
     for idd in test_data[affect]:
         #print idd
         try:
-           X_test.append([test_data[affect][idd]["ainl"][11]])
+           X_test.append(test_data[affect][idd]["ainl"])
            y_test.append(test_data[affect][idd]["magnitude"])
         except:
           exc_cnt_te += 1
